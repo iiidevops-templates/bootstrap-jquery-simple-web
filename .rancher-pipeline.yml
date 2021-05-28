@@ -78,7 +78,6 @@ stages:
     branch:
       include:
       - master
-      - develop
 
 - name: Deploy--Web
   steps:

@@ -15,7 +15,6 @@ stages:
       include:
       - master
       - develop
-stages:
 - name: Test--SonarQube source code scan
   iiidevops: sonarqube
   steps:

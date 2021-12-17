@@ -1,5 +1,5 @@
 stages:
-- name: Create connection by issue_id and git commit message
+- name: Integration--Issue and git hook
   iiidevops: git-hook
   steps:
   - envFrom:

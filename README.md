@@ -15,11 +15,10 @@
 | 檔案 | Dockerfile | (可調整)devops k8s環境部屬檔案 | 根目錄 |
 
 ## iiidevops
-* 專案內`.rancher-pipeline.yml`請勿更動，產品系統設計上不支援pipeline修改
-* 目前系統pipeline限制，因此寫的服務請一定要在port:`8080`，資料庫類型無法更改。
-* `iiidevops`資料夾內`pipeline_settings.json`請勿更動
+* 專案內`.rancher-pipeline.yml`原則上請不要自行更動，除非您已完全了解 pipeline 的語法以及 III DevOps 對 Pipeline 的修改原則
+* `iiidevops`資料夾內`pipeline_settings.json`為該範本的定義檔, 保留原本內容才有機會之後進行範本升級
 * `postman`資料夾內則是您在devops管理網頁上的Postman-collection(newman)自動測試檔案，devops系統會以`postman`資料夾內檔案做自動測試
-* `Dockerfile`內可能會看到很多本地端`Dockerfile.local`都加上前墜dockerhub，此為必須需求，為使image能從harbor上擷取出Docker Hub的image來源
+* `Dockerfile`內image前加上dockerhub，是為使image能透過本地端harbor當Proxy至Docker Hub下載image，解決多主機多專案環境重複至 Docker Hub下載相同image問題
 
 ## preview
 ![web-pre](./img/web-pre.png)

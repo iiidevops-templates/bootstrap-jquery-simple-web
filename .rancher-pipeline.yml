@@ -185,6 +185,7 @@ stages:
     branch:
       include:
       - skip-master
+      - master
 - name: Test--Postman
   iiidevops: postman
   steps:

@@ -184,8 +184,7 @@ stages:
   when:
     branch:
       include:
-      - skip-master
-      - master
+      - skip
 - name: Test--Postman
   iiidevops: postman
   steps:
